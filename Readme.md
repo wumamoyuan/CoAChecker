@@ -45,8 +45,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
    ```
 
 2. **To evaluate the impact of instance scale on the performance of pruning, abstraction refinement, and bound estimation:**
-   
-   - Download the [dataset](https://drive.google.com/uc?id=1htKafYP5mJkMHnmPpzJuMaVNe6q27XE3&export=download)
+   - Download the [dataset](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
 
       ```bash
       cd coachecker_c
@@ -91,7 +90,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
 
 3. **To determine the individual contribution of each component (*pruning*, *abstraction refinement*, and *bound estimation*):**
    
-   - Download the [dataset](https://drive.google.com/file/d/1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG/view?usp=sharing)
+   - Download the [dataset](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
 
       ```bash
       cd coachecker_c/data
@@ -118,7 +117,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
       ./compare.sh ../logs/ablation ./ablation.csv
       ```
 
-      **Note.** The script `eval_efficiency.sh` may take a long time to complete because there are **650** instances in the datasets. For each instance, the script will run coachecker for **4** times with different configurations:  
+      **Note.** The script `eval_efficiency.sh` may take a long time to complete because there are **15000** instances in the datasets. For each instance, the script will run coachecker for **4** times with different configurations:  
       - all components are enabled
       - pruning is disabled
       - abstraction refinement is disabled
@@ -128,7 +127,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
 
 4. **To compare the performance of coachecker with VAC and Mohawk:**
 
-   - Download the [dataset](https://drive.google.com/file/d/1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG/view?usp=sharing)
+   - Download the [dataset](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
 
       ```bash
       cd coachecker_c/data
@@ -156,7 +155,3 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
       ```bash
       ./log_analyzer -l ../logs/comp-coachecker-mohawk-vac/<dataset_name>
       ```
-
-## License
-
-[Add license information here]

@@ -14,7 +14,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
    - cmake
 3. Download [nuXmv](https://nuxmv.fbk.eu/download.html)
    ```bash
-   cd coachecker_c
+   cd coachecker
    wget -O nuXmv-2.1.0-linux64.tar.xz https://nuxmv.fbk.eu/theme/download.php?file=nuXmv-2.1.0-linux64.tar.xz
    tar Jxvf nuXmv-2.1.0-linux64.tar.xz
    mv nuXmv-2.1.0-linux64/ nuXmv
@@ -48,7 +48,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
    - Download the [dataset](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
 
       ```bash
-      cd coachecker_c
+      cd coachecker
       mkdir data && cd data
       ```
    
@@ -57,7 +57,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
       Run the following script and wait for it to complete
 
       ```bash
-      cd coachecker_c/bin
+      cd coachecker/bin
       mkdir -p ../logs
       nohup ./eval_pruning.sh > ../logs/exp_pruning.log 2>&1 &
       ```
@@ -69,7 +69,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
       Run the following script and wait for it to complete
 
       ```bash
-      cd coachecker_c/bin
+      cd coachecker/bin
       nohup ./eval_absref.sh -n ../nuXmv -l ../logs/eval_absref -o ../data/ARR.csv > ../logs/eval_absref_progress 2>&1 &
       ```
 
@@ -84,7 +84,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
    - Evaluate the performance of bound estimation
 
       ```bash
-      cd coachecker_c/bin
+      cd coachecker/bin
       ./eval_bound.sh ./bound_tightness.csv
       ```
 
@@ -93,14 +93,14 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
    - Download the [dataset](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
 
       ```bash
-      cd coachecker_c/data
+      cd coachecker/data
       wget xxx
       ```
 
    - Run the script "bin/eval_efficiency.sh" and wait for it to complete
 
       ```bash
-      cd coachecker_c/bin
+      cd coachecker/bin
       mkdir -p ../logs
       nohup ./eval_efficiency.sh -a -n ../nuXmv -t 600 -l ../logs/ablation > ../logs/ablation_progress 2>&1 &
       ```
@@ -130,7 +130,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
    - Download the [dataset](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
 
       ```bash
-      cd coachecker_c/data
+      cd coachecker/data
       wget xxx
       ```
    
@@ -139,7 +139,7 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
    - Run the script "bin/eval_efficiency.sh" and wait for it to complete
 
       ```bash
-      cd coachecker_c/bin
+      cd coachecker/bin
       mkdir -p ../logs
       nohup ./eval_efficiency.sh -c -m -v <vac_home> -n ../nuXmv -t 600 -l ../logs/comp-coachecker-mohawk-vac > ../logs/comp_cmv_progress 2>&1 &
       ```

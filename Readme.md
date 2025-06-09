@@ -45,11 +45,11 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
    ```
 
 2. **To evaluate the impact of instance scale on the performance of pruning, abstraction refinement, and bound estimation:**
-   - Download the [dataset](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
+   - Download dataset [data.tar](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
 
       ```bash
       cd coachecker
-      mkdir data && cd data
+      tar -xvf data.tar
       ```
    
    - Evaluate the performance of pruning
@@ -90,11 +90,11 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
 
 3. **To determine the individual contribution of each component (*pruning*, *abstraction refinement*, and *bound estimation*):**
    
-   - Download the [dataset](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
+   - Download dataset [data.tar](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
 
       ```bash
-      cd coachecker/data
-      wget xxx
+      cd coachecker
+      tar -xvf data.tar
       ```
 
    - Run the script "bin/eval_efficiency.sh" and wait for it to complete
@@ -123,15 +123,15 @@ CoAChecker is a tool designed to analyze the safety of ACoAC policies. It uses f
       - abstraction refinement is disabled
       - bound estimation is disabled
       
-      For each run, the script sets the timeout threshold to **600** seconds. According to the test on a XX server, it requires about **72** hours to complete the experiments. To reduce the running time, it is recommended to set the timeout threshold to a smaller value.
+      For each run, the script sets the timeout threshold to **600** seconds. According to the test on a Linux 64-bit server equipped with four Intel(R) Xeon(R) Gold 6234 3.30 GHz CPUs and 346GB of RAM, it requires about **60** hours to complete the experiments. To reduce the running time, it is recommended to set the timeout threshold to a smaller value.
 
 4. **To compare the performance of coachecker with VAC and Mohawk:**
 
-   - Download the [dataset](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
+   - Download dataset [data.tar](https://drive.google.com/uc?id=1c2-EPhiTKJVPyTu7EH6PfKtd427JaouG&export=download)
 
       ```bash
-      cd coachecker/data
-      wget xxx
+      cd coachecker
+      tar -xvf data.tar
       ```
    
    - Install VAC and Mohawk
